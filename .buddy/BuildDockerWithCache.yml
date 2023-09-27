@@ -11,5 +11,4 @@
     type: "DOCKERFILE"
     dockerfile_path: "baserepo/Dockerfile"
     context_path: "baserepo/"
-    do_not_prune_images: true
     pull: false
