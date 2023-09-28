@@ -7,13 +7,6 @@
   fail_on_prepare_env_warning: true
   resources: "XLARGE"
   actions:
-    - action: "Execute docker ps -a"
-    type: "BUILD"
-    docker_image_name: "library/ubuntu"
-    docker_image_tag: "20.04"
-    execute_commands:
-    - "docker ps -a"
-    shell: "BASH"
   - action: "Build Docker image"
     type: "DOCKERFILE"
     dockerfile_path: "baserepo/Dockerfile"
