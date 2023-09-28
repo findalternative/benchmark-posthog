@@ -12,3 +12,9 @@
     dockerfile_path: "baserepo/Dockerfile"
     context_path: "baserepo/"
     pull: false
+  - action: "Run benchmark-posthog/restarter"
+    type: "RUN_NEXT_PIPELINE"
+    comment: "Triggered by $BUDDY_PIPELINE_NAME execution #$BUDDY_EXECUTION_ID"
+    priority: "NORMAL"
+    next_project_name: "benchmark-posthog"
+    next_pipeline_name: "restarter"
